@@ -17,7 +17,7 @@ DPL250K flowmeter=DPL250K(pin_fl);
 
 double setpoint, input, output;
 
-PID controlador(&input, &output, &setpoint,2,5,1,DIRECT);
+PID controlador(&input, &output, &setpoint,2,5,1,REVERSE);
 int WindowSize=5000;
 unsigned long windowStartTime;
 
@@ -44,6 +44,16 @@ void loop(){
 }
 
 void getPorts(){
+   
+  controlador.SetMode(AUTOMATIC);
+  pin_t1=14;
+  pin_t2=15;
+  pin_pump1=16;
+  pin_pump2=17;
+  pin_pump3=18;
+  pin_cooler=19;
+  pin_heater=20;
+  pin_fl=2; //digital 21
 }
 
 void medir(){
