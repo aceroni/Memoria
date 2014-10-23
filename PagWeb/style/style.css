@@ -1,0 +1,10 @@
+#main {
+	background-image: url(../images/HMI.png);
+	background-repeat: no-repeat;
+	padding-right: 90%;
+	padding-top: 0px;
+	padding-bottom: 90%;
+	background-attachment: scroll;
+	background-size: contain;
+	background-origin: padding-box;
+}

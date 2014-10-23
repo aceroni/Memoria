@@ -1,11 +1,6 @@
-/*
-	DPL250K.cpp - Biblioteca para miniturbina DPL250 versión K
-	Creado por Álvaro Ceroni, Septiembre, 2014.
-	Verifique el puerto corresponda un interrupt pin.
-	http://arduino.cc/en/pmwiki.php?n=Reference/AttachInterrupt
-*/
 #include "Arduino.h"
 #include "DPL250K.h"
+
 volatile int NbTopsFan;
 
 void rpm()
@@ -18,7 +13,7 @@ DPL250K::DPL250K(int port)
 	attachInterrupt(port,rpm,RISING);
 }
 
-double DPL250K::medir()
+double DPL250K::measure()
 {
 	double calc;
 	NbTopsFan=0;
@@ -28,4 +23,3 @@ double DPL250K::medir()
 	calc=1.0*NbTopsFan/35.07;
 	return calc;
 }
-

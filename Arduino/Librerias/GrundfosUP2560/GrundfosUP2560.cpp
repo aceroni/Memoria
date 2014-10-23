@@ -44,20 +44,20 @@ void GrundfosUP2560::changeStatus(int status){
 	}
 	else if(_status==1){
 			digitalWrite(_port1,HIGH);
-			digitalWrite(_port2,LOW);
+			digitalWrite(_port2,HIGH);
 			digitalWrite(_port3,LOW);
 			return;
 		}
 	else if(_status==2){
-			digitalWrite(_port1,LOW);
-			digitalWrite(_port2,HIGH);
+			digitalWrite(_port1,HIGH);
+			digitalWrite(_port2,LOW);
 			digitalWrite(_port3,LOW);
 			return;
 		}
 	else{
 		digitalWrite(_port1,LOW);
 		digitalWrite(_port2,LOW);
-		digitalWrite(_port3,HIGH);
+		digitalWrite(_port3,LOW);
 		return;
 	}
 }

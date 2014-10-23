@@ -46,14 +46,14 @@ void loop(){
 void getPorts(){
    
   controlador.SetMode(AUTOMATIC);
-  pin_t1=14;
-  pin_t2=15;
+  pin_t1=15;
+  pin_t2=14;
   pin_pump1=16;
   pin_pump2=17;
   pin_pump3=18;
-  pin_cooler=19;
-  pin_heater=20;
-  pin_fl=2; //digital 21
+  pin_cooler=21;
+  pin_heater=19;
+  pin_fl=3; //digital 20
 }
 
 void medir(){
